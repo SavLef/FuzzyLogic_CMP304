@@ -1,1 +1,5 @@
-﻿  AI_FuzzyLogic.vcxproj -> C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\x64\Debug\AI_FuzzyLogic.exe
+﻿  Game.cpp
+c:\users\mist\desktop\aifuzzy\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\game.cpp(90): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\mist\desktop\aifuzzy\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\game.cpp(95): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\mist\desktop\aifuzzy\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\game.cpp(156): warning C4244: 'argument': conversion from 'fl::scalar' to 'float', possible loss of data
+  AI_FuzzyLogic.vcxproj -> C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\x64\Debug\AI_FuzzyLogic.exe
