@@ -89,7 +89,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\AI_FuzzyLogic\SFML-2.5.1\include;C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\AI_FuzzyLogic\fl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/$(SolutionName)/SFML-2.5.1/include;$(SolutionDir)/$(SolutionName)/fl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\AI_FuzzyLogic\SFML-2.5.1\lib;C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\AI_FuzzyLogic\fl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
