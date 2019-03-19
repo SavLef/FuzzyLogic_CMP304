@@ -1,0 +1,8 @@
+﻿main.obj : error LNK2019: unresolved external symbol "public: __thiscall fl::FisImporter::FisImporter(void)" (??0FisImporter@fl@@QAE@XZ) referenced in function _main
+main.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall fl::FisImporter::~FisImporter(void)" (??1FisImporter@fl@@UAE@XZ) referenced in function _main
+release\bin\fuzzylite.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+SFML-2.5.1\lib\sfml-graphics-d.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+SFML-2.5.1\lib\sfml-main-d.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+SFML-2.5.1\lib\sfml-system-d.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+SFML-2.5.1\lib\sfml-window-d.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\Debug\AI_FuzzyLogic.exe : fatal error LNK1120: 2 unresolved externals
