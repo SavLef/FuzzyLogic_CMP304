@@ -8,7 +8,7 @@ Game::Game(sf::RenderWindow* hwnd, Input* inpt)
 
 
 	//Import MatLab Data
-	engine = fl::FisImporter().fromFile("MatL.fis");
+	engine = fl::FisImporter().fromFile("1.fis");
 
 	//Textures
 	t_Car.loadFromFile("gfx/bullet.png");
@@ -20,13 +20,15 @@ Game::Game(sf::RenderWindow* hwnd, Input* inpt)
 	//Sprites
 				//Player 1
 	Car.setSize(sf::Vector2f(180, 100));
+	Car.setOrigin(Car.getSize().x / 2, Car.getSize().y / 2);
 	Car.setFillColor(sf::Color::Red);
 	Car.setTexture(&t_Car);
 	Car.setPosition(400, 300);
 
 
 	//Player 2
-	RacingLine.setSize(sf::Vector2f(180, 1000));
+	RacingLine.setSize(sf::Vector2f(10, 1000));
+	RacingLine.setOrigin(RacingLine.getSize().x / 2, RacingLine.getSize().y / 2);
 	RacingLine.setFillColor(sf::Color::White);
 	RacingLine.setTexture(&t_RacingLine);
 	RacingLine.setPosition(400, 100);
@@ -132,7 +134,7 @@ void Game::update(float dt)
 	}
 
 	
-	f_distance = (RacingLine.getPosition().x - Car.getPosition().x) / 160;
+	f_distance = (RacingLine.getPosition().x - Car.getPosition().x) / 800;
 	
 	
 
@@ -147,13 +149,10 @@ void Game::update(float dt)
 	output = engine->getOutputVariable(0);
 	
 
-	if (f_distance > 0 && f_distance < 0.05)
-	{
-		f_velocity=0;
-	}
+	f_velocity = -output->getValue();
 
 	
-	Car.move(-(output->getValue())*dt * 1000, 0);
+	Car.move((f_velocity)*dt * 1000, 0);
 	
 	
 

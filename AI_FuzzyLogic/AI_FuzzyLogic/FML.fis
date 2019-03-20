@@ -1,0 +1,69 @@
+[System]
+Name='FML'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Distance'
+Range=[-1 1]
+NumMFs=5
+MF1='Left':'trapmf',[-0.9 -0.6 -0.4 -0.1]
+MF2='Middle':'trimf',[-0.5 0 0.5]
+MF3='Right':'trapmf',[0.1 0.4 0.6 0.9]
+MF4='FarLeft':'trapmf',[-1 -1 -1 -0.6]
+MF5='FarRight':'trapmf',[0.6 1 1 1]
+
+[Input2]
+Name='Velocity'
+Range=[-1 1]
+NumMFs=5
+MF1='Left':'trapmf',[-0.9 -0.6 -0.4 -0.1]
+MF2='Middle':'trimf',[-0.5 0 0.5]
+MF3='Right':'trapmf',[0.1 0.4 0.6 0.9]
+MF4='FarLeft':'trapmf',[-1 -1 -1 -0.6]
+MF5='FarRight':'trapmf',[0.6 1 1 1]
+
+[Output1]
+Name='output1'
+Range=[-1 1]
+NumMFs=5
+MF1='SteerLeft':'trimf',[-1 -0.5 0]
+MF2='NoSteering':'trimf',[-0.5 0 0.5]
+MF3='SteerRight':'trimf',[0 0.5 1]
+MF4='SteerFarLeft':'trimf',[-1 -1 -0.5]
+MF5='SteerFarRight':'trimf',[0.5 1 1]
+
+[Rules]
+4 4, 2 (1) : 1
+4 1, 1 (1) : 1
+4 2, 4 (1) : 1
+4 3, 4 (1) : 1
+4 5, 4 (1) : 1
+1 4, 2 (1) : 1
+1 1, 2 (1) : 1
+1 2, 1 (1) : 1
+1 3, 1 (1) : 1
+1 5, 4 (1) : 1
+5 5, 2 (1) : 1
+5 3, 3 (1) : 1
+5 2, 5 (1) : 1
+5 1, 5 (1) : 1
+5 4, 5 (1) : 1
+3 5, 2 (1) : 1
+3 3, 2 (1) : 1
+3 2, 3 (1) : 1
+3 1, 3 (1) : 1
+3 4, 5 (1) : 1
+2 4, 5 (1) : 1
+2 1, 3 (1) : 1
+2 2, 2 (1) : 1
+2 3, 1 (1) : 1
+2 5, 4 (1) : 1

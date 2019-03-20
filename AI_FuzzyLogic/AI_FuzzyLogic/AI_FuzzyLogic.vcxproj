@@ -89,10 +89,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/$(SolutionName)/SFML-2.5.1/include;$(SolutionDir)/$(SolutionName)/fl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/$(SolutionName)/SFML-2.5.1/include;$(SolutionDir)/$(SolutionName)\fl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\AI_FuzzyLogic\SFML-2.5.1\lib;C:\Users\Mist\Desktop\AIFuzzy\FuzzyLogic_CMP304\AI_FuzzyLogic\AI_FuzzyLogic\fl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(SolutionName)/SFML-2.5.1/lib;$(SolutionDir)/$(SolutionName)\fl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>release/bin/fuzzylite.lib;SFML-2.5.1/lib/sfml-main-d.lib;SFML-2.5.1/lib/sfml-graphics-d.lib;SFML-2.5.1/lib/sfml-system-d.lib;SFML-2.5.1/lib/sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

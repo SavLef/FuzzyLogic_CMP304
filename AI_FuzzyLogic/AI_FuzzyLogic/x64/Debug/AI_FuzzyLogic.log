@@ -1,17 +1,5 @@
-﻿  AnimatedSprite.cpp
-c:\users\lefkos savvides\desktop\ai\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\animatedsprite.cpp(20): warning C4018: '>': signed/unsigned mismatch
-  Game.cpp
-c:\users\lefkos savvides\desktop\ai\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\game.cpp(90): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\lefkos savvides\desktop\ai\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\game.cpp(95): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-c:\users\lefkos savvides\desktop\ai\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\game.cpp(156): warning C4244: 'argument': conversion from 'fl::scalar' to 'float', possible loss of data
-  Input.cpp
-  main.cpp
-c:\users\lefkos savvides\desktop\ai\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\main.cpp(22): warning C4326: return type of 'main' should be 'int' instead of 'void'
-c:\users\lefkos savvides\desktop\ai\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\main.cpp(39): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Sprite.cpp
-  Generating Code...
-  AI_FuzzyLogic.vcxproj -> C:\Users\Lefkos Savvides\Desktop\AI\FuzzyLogic_CMP304\AI_FuzzyLogic\x64\Debug\AI_FuzzyLogic.exe
+﻿  Game.cpp
+c:\users\lefkos savvides\desktop\fuzzylogic_cmp304-master\ai_fuzzylogic\ai_fuzzylogic\game.cpp(92): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\lefkos savvides\desktop\fuzzylogic_cmp304-master\ai_fuzzylogic\ai_fuzzylogic\game.cpp(97): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\lefkos savvides\desktop\fuzzylogic_cmp304-master\ai_fuzzylogic\ai_fuzzylogic\game.cpp(152): warning C4244: '=': conversion from 'fl::scalar' to 'float', possible loss of data
+  AI_FuzzyLogic.vcxproj -> C:\Users\Lefkos Savvides\Desktop\FuzzyLogic_CMP304-master\AI_FuzzyLogic\x64\Debug\AI_FuzzyLogic.exe

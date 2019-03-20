@@ -3,7 +3,7 @@
 
 //int main(int argc, char **argv)
 //{
-fl::Engine* engine = fl::FisImporter().fromFile("MatL.fis");
+//fl::Engine* engine = fl::FisImporter().fromFile("MatL.fis");
 //
 //	engine->getInputVariable(0)->setValue(2);
 //	engine->getInputVariable(1)->setValue(-1);
