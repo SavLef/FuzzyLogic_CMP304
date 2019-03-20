@@ -19,7 +19,7 @@ Game::Game(sf::RenderWindow* hwnd, Input* inpt)
 
 	//Sprites
 				//Player 1
-	Car.setSize(sf::Vector2f(180, 100));
+	Car.setSize(sf::Vector2f(80, 100));
 	Car.setOrigin(Car.getSize().x / 2, Car.getSize().y / 2);
 	Car.setFillColor(sf::Color::Red);
 	Car.setTexture(&t_Car);
@@ -27,9 +27,9 @@ Game::Game(sf::RenderWindow* hwnd, Input* inpt)
 
 
 	//Player 2
-	RacingLine.setSize(sf::Vector2f(10, 1000));
+	RacingLine.setSize(sf::Vector2f(10, 10000));
 	RacingLine.setOrigin(RacingLine.getSize().x / 2, RacingLine.getSize().y / 2);
-	RacingLine.setFillColor(sf::Color::White);
+	RacingLine.setFillColor(sf::Color::Black);
 	RacingLine.setTexture(&t_RacingLine);
 	RacingLine.setPosition(400, 100);
 
@@ -63,9 +63,12 @@ Game::Game(sf::RenderWindow* hwnd, Input* inpt)
 	Velocity.setPosition(350, 0);
 	Steering.setPosition(750, 0);
 
-	Distance.setFillColor(sf::Color::White);
-	Velocity.setFillColor(sf::Color::White);
+	Distance.setFillColor(sf::Color::Black);
+	Velocity.setFillColor(sf::Color::Black);
 	Steering.setFillColor(sf::Color::Red);
+
+	std::cout << "Use left and right arrows to move line." << std::endl;
+	std::cout << "Hold 1 or 2 while moving to increase speed." << std::endl;
 
 }
 Game::~Game()
@@ -169,20 +172,21 @@ void Game::render()
 {
 	beginDraw();
 	
-	window->draw(s_Background);
+	//window->draw(s_Background);
+	window->draw(RacingLine);
+	window->draw(Car);
 	window->draw(Distance);
 	window->draw(Velocity);
 	window->draw(Steering);
 
-	window->draw(RacingLine);
-	window->draw(Car);
+	
 	
 	
 	endDraw();
 }
 void Game::beginDraw()
 {
-	window->clear(sf::Color::Black);
+	window->clear(sf::Color::White);
 }
 void Game::endDraw()
 {
