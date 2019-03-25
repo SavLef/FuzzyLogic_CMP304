@@ -44,28 +44,32 @@ Game::Game(sf::RenderWindow* hwnd, Input* inpt)
 
 	font.loadFromFile("Font/arial.ttf");
 
+	//VALUES SETUP
 	Distance.setFont(font);
 	Steering.setFont(font);
 	Velocity.setFont(font);
 
-
-	Distance.setString("Distance from Line:        %" );
-	Distance.setString(std::to_string(f_distance));
-
-	Velocity.setString("Velocity:        %");
-	Velocity.setString(std::to_string(f_velocity));
-
-	Steering.setString("Steering:        %");
-	//Steering.setString(std::to_string(output->getValue()));
-
-
-	Distance.setPosition(0,0);
-	Velocity.setPosition(350, 0);
-	Steering.setPosition(750, 0);
+	Distance.setPosition(0,50);
+	Velocity.setPosition(330, 50);
+	Steering.setPosition(660, 50);
 
 	Distance.setFillColor(sf::Color::Black);
-	Velocity.setFillColor(sf::Color::Black);
+	Velocity.setFillColor(sf::Color::Blue);
 	Steering.setFillColor(sf::Color::Red);
+
+	//VALUE NAMES SETUP
+	n_Distance.setFont(font);
+	n_Steering.setFont(font);
+	n_Velocity.setFont(font);
+
+	n_Distance.setPosition(0, 0);
+	n_Velocity.setPosition(330, 0);
+	n_Steering.setPosition(660, 0);
+
+	n_Distance.setFillColor(sf::Color::Black);
+	n_Velocity.setFillColor(sf::Color::Blue);
+	n_Steering.setFillColor(sf::Color::Red);
+
 
 	std::cout << "Use left and right arrows to move line." << std::endl;
 	std::cout << "Hold 1 or 2 while moving to increase speed." << std::endl;
@@ -89,16 +93,16 @@ void Game::handleInput()
 
 void Game::update(float dt)
 {
-	//VELOCITY
-	if (input->isKeyDown(sf::Keyboard::Up))
-	{
-		f_velocity += 0.5*dt;
-	}
+	////VELOCITY
+	//if (input->isKeyDown(sf::Keyboard::Up))
+	//{
+	//	f_velocity += 0.5*dt;
+	//}
 
-	if (input->isKeyDown(sf::Keyboard::Down))
-	{
-		f_velocity -= 0.5*dt;
-	}
+	//if (input->isKeyDown(sf::Keyboard::Down))
+	//{
+	//	f_velocity -= 0.5*dt;
+	//}
 
 	
 
@@ -163,6 +167,10 @@ void Game::update(float dt)
 	Distance.setString(std::to_string(f_distance));
 	Velocity.setString(std::to_string(f_velocity));
 	Steering.setString(std::to_string(output->getValue()));
+
+	n_Distance.setString("Distance:");
+	n_Velocity.setString("Velocity:");
+	n_Steering.setString("Steering:");
 }
 
 	
@@ -175,9 +183,16 @@ void Game::render()
 	//window->draw(s_Background);
 	window->draw(RacingLine);
 	window->draw(Car);
+
+	window->draw(n_Distance);
+	window->draw(n_Velocity);
+	window->draw(n_Steering);
+
 	window->draw(Distance);
 	window->draw(Velocity);
 	window->draw(Steering);
+
+
 
 	
 	

@@ -35,6 +35,10 @@ private:
 	sf::Text Steering;
 	sf::Text Velocity;
 
+	sf::Text n_Distance;
+	sf::Text n_Steering;
+	sf::Text n_Velocity;
+
 	AnimatedSprite Car;
 	AnimatedSprite RacingLine;
 
