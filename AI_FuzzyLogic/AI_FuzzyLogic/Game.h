@@ -16,6 +16,7 @@ public:
 	void handleInput();
 	void update(float dt);
 	void gameloop();
+	void stage1();
 	void render();
 
 

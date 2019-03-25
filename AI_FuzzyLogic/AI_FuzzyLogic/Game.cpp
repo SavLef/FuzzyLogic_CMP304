@@ -73,6 +73,8 @@ Game::Game(sf::RenderWindow* hwnd, Input* inpt)
 
 	std::cout << "Use left and right arrows to move line." << std::endl;
 	std::cout << "Hold 1 or 2 while moving to increase speed." << std::endl;
+	std::cout << std::endl << std::endl;
+	
 
 }
 Game::~Game()
@@ -173,7 +175,47 @@ void Game::update(float dt)
 	n_Steering.setString("Steering:");
 }
 
-	
+
+void Game::stage1()
+{
+	float in1 = 0; 
+	float in2 = 0;
+
+	std::cout << "Enter Value for DISTANCE from line: (Between -1 and 1)" << std::endl;
+	std::cin >> in1;
+
+	std::cout << "Enter Value for INITIAL VELOCITY: (Between -1 and 1)" << std::endl;
+	std::cin >> in2;
+
+	while (in1 < -1 || in1 > 1)
+	{
+		std::cout << "Re-Enter Value for DISTANCE from line: (Between -1 and 1)" << std::endl;
+		std::cin >> in1;
+	}
+
+	while (in2 < -1 || in2 > 1)
+	{
+		std::cout << "Re-Enter Value for INITIAL VELOCITY: (Between -1 and 1)" << std::endl;
+		std::cin >> in2;
+	}
+
+
+
+	//VELOCITY
+	engine->getInputVariable(0)->setValue(in1);
+
+	//DISTANCE
+	engine->getInputVariable(1)->setValue(in2);
+
+	engine->process();
+
+	output = engine->getOutputVariable(0);
+
+	std::cout << " Output result is: " << output->getValue() << std::endl;
+
+
+
+}
 	
 
 void Game::render()
@@ -193,9 +235,6 @@ void Game::render()
 	window->draw(Steering);
 
 
-
-	
-	
 	
 	endDraw();
 }
