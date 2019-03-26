@@ -62,4 +62,7 @@ private:
 	float f_velocity;
 	float f_distance;
 	float speed;
+
+	float in1 = 0;
+	float in2 = 0;
 };

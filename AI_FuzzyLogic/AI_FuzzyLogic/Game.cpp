@@ -178,8 +178,7 @@ void Game::update(float dt)
 
 void Game::stage1()
 {
-	float in1 = 0; 
-	float in2 = 0;
+	
 
 	std::cout << "Enter Value for DISTANCE from line: (Between -1 and 1)" << std::endl;
 	std::cin >> in1;
