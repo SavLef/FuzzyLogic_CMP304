@@ -63,6 +63,17 @@ private:
 	float f_distance;
 	float speed;
 
+	
+	void toggleStage();
+
+	
+
 	float in1 = 0;
 	float in2 = 0;
+
+	int Stage = 0;
+
+public:
+	void setStage(int stg);
+	int getStage();
 };

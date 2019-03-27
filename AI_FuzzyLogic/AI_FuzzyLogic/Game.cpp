@@ -142,6 +142,12 @@ void Game::update(float dt)
 		RacingLine.move(-300 * dt, 0);
 	}
 
+
+	//VELOCITY
+	if (input->isKeyDown(sf::Keyboard::Num3))
+	{
+		toggleStage();
+	}
 	
 	f_distance = (RacingLine.getPosition().x - Car.getPosition().x) / 800;
 	
@@ -175,45 +181,74 @@ void Game::update(float dt)
 	n_Steering.setString("Steering:");
 }
 
+void Game :: setStage(int stg)
+{
+	Stage = stg;
+}
 
+int Game::getStage()
+{
+	return Stage;
+}
+
+void Game::toggleStage()
+{
+	if (Stage == 1)
+	{
+		Stage = 2;
+	}
+
+	else if (Stage == 2)
+	{
+		Stage = 1;
+	}
+}
 void Game::stage1()
 {
-	
 
-	std::cout << "Enter Value for DISTANCE from line: (Between -1 and 1)" << std::endl;
+
+	std::cout << "Enter Value for DISTANCE from line: (Between -1 and 1) OR ENTER 3 to toggle back to SFML." << std::endl;
 	std::cin >> in1;
 
+	if (in1 == 3)
+	{
+		toggleStage();
+	}
+
+	if (in1 != 3) {
 	std::cout << "Enter Value for INITIAL VELOCITY: (Between -1 and 1)" << std::endl;
 	std::cin >> in2;
 
-	while (in1 < -1 || in1 > 1)
-	{
-		std::cout << "Re-Enter Value for DISTANCE from line: (Between -1 and 1)" << std::endl;
-		std::cin >> in1;
+	
+	
+		while (in1 < -1 || in1 > 1)
+		{
+			std::cout << "Re-Enter Value for DISTANCE from line: (Between -1 and 1)" << std::endl;
+			std::cin >> in1;
+		}
+
+		while (in2 < -1 || in2 > 1)
+		{
+			std::cout << "Re-Enter Value for INITIAL VELOCITY: (Between -1 and 1)" << std::endl;
+			std::cin >> in2;
+		}
+
+
+
+		//VELOCITY
+		engine->getInputVariable(0)->setValue(in1);
+
+		//DISTANCE
+		engine->getInputVariable(1)->setValue(in2);
+
+		engine->process();
+
+		output = engine->getOutputVariable(0);
+
+		std::cout << " Output result is: " << output->getValue() << std::endl;
+
+
 	}
-
-	while (in2 < -1 || in2 > 1)
-	{
-		std::cout << "Re-Enter Value for INITIAL VELOCITY: (Between -1 and 1)" << std::endl;
-		std::cin >> in2;
-	}
-
-
-
-	//VELOCITY
-	engine->getInputVariable(0)->setValue(in1);
-
-	//DISTANCE
-	engine->getInputVariable(1)->setValue(in2);
-
-	engine->process();
-
-	output = engine->getOutputVariable(0);
-
-	std::cout << " Output result is: " << output->getValue() << std::endl;
-
-
-
 }
 	
 
