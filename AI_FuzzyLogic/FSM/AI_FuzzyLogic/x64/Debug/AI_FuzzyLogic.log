@@ -1,0 +1,4 @@
+﻿  Game.cpp
+c:\users\lefkos savvides\desktop\ai - copy\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\game.h(76): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lefkos savvides\desktop\ai - copy\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\game.h(77): warning C4305: 'initializing': truncation from 'double' to 'float'
+  AI_FuzzyLogic.vcxproj -> C:\Users\Lefkos Savvides\Desktop\AI - Copy\FuzzyLogic_CMP304\AI_FuzzyLogic\x64\Debug\AI_FuzzyLogic.exe

@@ -1,0 +1,69 @@
+[System]
+Name='yy56y5y56y5'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Distance'
+Range=[-1 1]
+NumMFs=5
+MF1='Left':'gaussmf',[0.2123 -0.5]
+MF2='Middle':'gaussmf',[0.2123 1.388e-17]
+MF3='Right':'gaussmf',[0.2123 0.5]
+MF4='FarLeft':'trapmf',[-1 -1 -1 -0.6]
+MF5='FarRight':'trapmf',[0.6 1 1 1]
+
+[Input2]
+Name='Velocity'
+Range=[-1 1]
+NumMFs=5
+MF1='Left':'gauss2mf',[0.1019 -0.63 0.1019 -0.37]
+MF2='Middle':'gauss2mf',[0.1699 -0.05 0.1699 0.05]
+MF3='Right':'gauss2mf',[0.1019 0.37 0.1019 0.63]
+MF4='FarLeft':'trapmf',[-1 -1 -1 -0.6]
+MF5='FarRight':'trapmf',[0.6 1 1 1]
+
+[Output1]
+Name='output1'
+Range=[-1 1]
+NumMFs=5
+MF1='SteerLeft':'gbellmf',[0.15 2.5 -0.5]
+MF2='NoSteering':'gaussmf',[0.1274 1.041e-17]
+MF3='SteerRight':'gaussmf',[0.1274 0.5]
+MF4='SteerFarLeft':'gaussmf',[0.1519 -0.9773]
+MF5='SteerFarRight':'trimf',[0.6 1 1]
+
+[Rules]
+4 4, 5 (1) : 1
+4 1, 5 (1) : 1
+4 2, 5 (1) : 1
+4 3, 3 (1) : 1
+4 5, 2 (1) : 1
+1 4, 5 (1) : 1
+1 1, 3 (1) : 1
+1 2, 3 (1) : 1
+1 3, 2 (1) : 1
+1 5, 1 (1) : 1
+5 5, 4 (1) : 1
+5 3, 4 (1) : 1
+5 2, 4 (1) : 1
+5 1, 1 (1) : 1
+5 4, 2 (1) : 1
+3 5, 4 (1) : 1
+3 3, 1 (1) : 1
+3 2, 1 (1) : 1
+3 1, 2 (1) : 1
+3 4, 3 (1) : 1
+2 4, 5 (1) : 1
+2 1, 3 (1) : 1
+2 2, 2 (1) : 1
+2 3, 1 (1) : 1
+2 5, 4 (1) : 1
