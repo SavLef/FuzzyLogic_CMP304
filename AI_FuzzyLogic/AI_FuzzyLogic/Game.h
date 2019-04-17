@@ -61,7 +61,7 @@ private:
 
 	float f_velocity;
 	float f_distance;
-	float speed;
+	float speed = 1000;
 
 	
 	void toggleStage();

@@ -1,8 +1,3 @@
-﻿  main.cpp
-c:\users\lefkos savvides\desktop\ai\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\main.cpp(7): warning C4326: return type of 'main' should be 'int' instead of 'void'
-c:\users\lefkos savvides\desktop\ai\fuzzylogic_cmp304\ai_fuzzylogic\ai_fuzzylogic\main.cpp(24): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  AI_FuzzyLogic.vcxproj -> C:\Users\Lefkos Savvides\Desktop\AI\FuzzyLogic_CMP304\AI_FuzzyLogic\x64\Debug\AI_FuzzyLogic.exe
+﻿  Game.cpp
+c:\users\mist\desktop\lefkossavvides_1602544_aifuzzylogic\ai_fuzzylogic\game.cpp(158): warning C4244: '=': conversion from 'fl::scalar' to 'float', possible loss of data
+  AI_FuzzyLogic.vcxproj -> C:\Users\Mist\Desktop\LefkosSavvides_1602544_AIFuzzyLogic\x64\Debug\AI_FuzzyLogic.exe
